@@ -76,11 +76,7 @@ public class Ticker implements Runnable{
 				}
 				
 				
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				
 				if (System.currentTimeMillis() - lastSecond > 1000*every) {
 					//tick - a second
 					p.tick();
