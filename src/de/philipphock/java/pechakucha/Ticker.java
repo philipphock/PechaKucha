@@ -3,7 +3,7 @@ package de.philipphock.java.pechakucha;
 
 public class Ticker implements Runnable{
 
-	private boolean stopped=false;
+	private volatile boolean stopped=false;
 	
 	private Thread ownThread;
 	
@@ -15,7 +15,7 @@ public class Ticker implements Runnable{
 		PLAY,PAUSE,STOP;
 	}
 	
-	private TickerState state; 
+	private volatile TickerState state; 
 	
 	private Presenter p;
 	
