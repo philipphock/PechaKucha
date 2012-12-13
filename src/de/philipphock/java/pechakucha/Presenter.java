@@ -66,7 +66,7 @@ public class Presenter  extends PresenterController {
 	}
 
 	/**
-	 * resets the state of 
+	 * resets the state of the presenter
 	 */
 	private void resetState(){
 		delayFirstSecondsPassed=0;
@@ -75,6 +75,9 @@ public class Presenter  extends PresenterController {
 		firstPlay=true;
 	}
 	
+	/**
+	 * performs a systemwide "next-slide" keystroke (pgdown)
+	 */
 	public void nextSlide(){
 		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
